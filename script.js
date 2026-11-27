@@ -24,7 +24,7 @@ const T={
     calLabel:'Calendar evenimente'
   }
 };
-let lang='en';
+let lang=((navigator.languages&&navigator.languages[0])||navigator.language||'en').toLowerCase().startsWith('ro')?'ro':'en';
 try{const s=localStorage.getItem('lang');if(s==='ro'||s==='en')lang=s}catch(e){}
 
 const translatable=[...document.querySelectorAll('[data-ro]')];
